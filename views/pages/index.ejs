@@ -15,59 +15,26 @@
         </div>
     </div>
 </div>
-<section class="categoru-jobs">
+
+<% for (job of jobs) { %>
+<section class="category-jobs">
     <div class="row margin-top">
         <div class="col-md-12">
-            <h4 class="text-maroon">CUSTOMER SUPPORT JOBS</h4>
+            <h4 class="text-maroon"><%= job.category_name %></h4>
         </div>
     </div>
     <div class="row margin-top">
         <div class="col-md-12">
             <ul>
-                <li>
-                    <span class="h3">Hotjar</span> <span class="job-link"><a
-                                href="#">Customer Support Manager</a></span>
-                    <span class="pull-right job-date">Dec 18</span>
-                </li>
-                <li>
-                    <span class="h3">Hotjar</span> <span class="job-link"><a
-                                href="#">Customer Support Manager</a></span>
-                    <span class="pull-right job-date">Dec 18</span>
-                </li>
-                <li>
-                    <span class="h3">Hotjar</span> <span class="job-link"><a
-                                href="#">Customer Support Manager</a></span>
-                    <span class="pull-right job-date">Dec 18</span>
-                </li>
+                <% for (post of job.jobs) { %>
+                    <li>
+                        <span class="h3">Hotjar</span> <span class="job-link"><a
+                                    href="#"><%= post.company_name%></a></span>
+                        <span class="pull-right job-date">Dec 18</span>
+                    </li>
+                <% } %>
             </ul>
         </div>
     </div>
 </section>
-<section class="categoru-jobs">
-    <div class="row margin-top">
-        <div class="col-md-12">
-            <h4 class="text-maroon">PROGRAMMING JOBS</h4>
-        </div>
-    </div>
-    <div class="row margin-top">
-        <div class="col-md-12">
-            <ul>
-                <li>
-                    <span class="h3">Hotjar</span> <span class="job-link"><a
-                                href="#">Customer Support Manager</a></span>
-                    <span class="pull-right job-date">Dec 18</span>
-                </li>
-                <li>
-                    <span class="h3">Hotjar</span> <span class="job-link"><a
-                                href="#">Customer Support Manager</a></span>
-                    <span class="pull-right job-date">Dec 18</span>
-                </li>
-                <li>
-                    <span class="h3">Hotjar</span> <span class="job-link"><a
-                                href="#">Customer Support Manager</a></span>
-                    <span class="pull-right job-date">Dec 18</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
+<% } %>

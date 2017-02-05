@@ -16,25 +16,29 @@
     </div>
 </div>
 
-<% for (job of jobs) { %>
-<section class="category-jobs">
-    <div class="row margin-top">
-        <div class="col-md-12">
-            <h4 class="text-maroon"><%= job.category_name %></h4>
+<% Object.keys(jobs).forEach(function(key) { %>
+    <% var category_jobs = jobs[key] %>
+    <section class="category-jobs">
+        <div class="row margin-top">
+            <div class="col-md-12">
+                <h4 class="text-maroon"><%= key %></h4>
+            </div>
         </div>
-    </div>
-    <div class="row margin-top">
-        <div class="col-md-12">
-            <ul>
-                <% for (post of job.jobs) { %>
+        <div class="row">
+            <div class="col-md-12">
+                <ul>
+                    <% for (post of category_jobs) { %>
                     <li>
-                        <span class="h3">Hotjar</span> <span class="job-link"><a
-                                    href="#"><%= post.company_name%></a></span>
+                        <span class="h3">
+                            <%= post.company_name%>
+                        </span>
+                        <span class="job-link"><a
+                                    href="#"><%= post.title%></a></span>
                         <span class="pull-right job-date">Dec 18</span>
                     </li>
-                <% } %>
-            </ul>
+                    <% } %>
+                </ul>
+            </div>
         </div>
-    </div>
-</section>
-<% } %>
+    </section>
+<% }); %>

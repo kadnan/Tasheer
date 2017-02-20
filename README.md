@@ -10,5 +10,5 @@ Once you clone it:
 - run `gulp` to copy asset files in `public` folder.
 
 ##Status
-The project is in initial stage of development.
+The project was aimed to learn Node/Express basics. I have not implemented search, edit and a few logical modules for instance login and Admin. You are free to implement.
 

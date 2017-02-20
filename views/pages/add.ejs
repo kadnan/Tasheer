@@ -1,0 +1,72 @@
+<%- contentFor('content') %>
+<form action="/add" method="POST">
+    <div class="row margin-top">
+        <div class="col-md-6 col-md-offset-2">
+            <h2>Step 1: Create your Ad</h2>
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-2">
+            <h3>First, tell us about the position</h3>
+        </div>
+    </div>
+    <div class="row medium-margin-top">
+        <div class="col-md-6 col-md-offset-2">
+            <div class="form-group">
+                <label>Job Title:</label>
+                <input type="text" class="form-control" name="title" id="title" required>
+                <span class="help-block">“Senior Designer” or “Rails Programmer”</span>
+            </div>
+
+            <div class="form-group">
+                <label>Category:</label>
+                <select name="category_id" id="category_id" class="form-control">
+                    <option value="">Select</option>
+                    <option value="1">Design</option>
+                    <option value="2">Programming</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Comppany Location:</label>
+                <input type="text" name="location" id="location" required class="form-control">
+                <span class="help-block">“Chicago, IL”, “Stockholm, Sweden”</span>
+            </div>
+            <div class="form-group">
+                <label>Job Description:</label>
+                <textarea name="details" id="details" cols="30" rows="10" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Where should people send their applicaiton?</label>
+                <input type="text" class="form-control" name="contact_link" required>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-2">
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-2">
+            <h3>Tell us about your company</h3>
+        </div>
+    </div>
+    <div class="row margin-top">
+        <div class="col-md-6 col-md-offset-2">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" class="form-control" id="company_name" name="company_name">
+                <span class="help-block">Enter your company or organization’s name.</span>
+            </div>
+            <div class="form-group">
+                <label>Company URL:</label>
+                <input type="text" class="form-control" name="company_url" id="company_url">
+                <span class="help-block">http://yourcompany.com</span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

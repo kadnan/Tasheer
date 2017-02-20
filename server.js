@@ -1,9 +1,13 @@
 var express = require('express');
 var connection = require('./app/db');
 var expressLayouts = require('express-ejs-layouts');
+var bodyParser = require('body-parser');
 var app = express();
 var port = 3000;
 
+// use Body Parser
+
+app.use(bodyParser.urlencoded({ extended: true }));
 /**
  * Making MySQL Connection
  */

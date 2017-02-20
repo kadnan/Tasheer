@@ -1,4 +1,9 @@
 <%- contentFor('content') %>
+<% if (done == 1) { %>
+    <div class="row margin-top">
+        <div class="col-md-4 col-md-offset-4"><div class="alert alert-success text-center">Job Added Successfully</div></div>
+    </div>
+<% }%>
 <div class="row">
     <div class="col-md-12">
         <h2>Welcome to Tasheer Forum</h2>
@@ -13,6 +18,11 @@
                         <button class="btn btn-primary btn-lg" type="button">Search</button>
                       </span>
         </div>
+    </div>
+</div>
+<div class="row margin-top">
+    <div class="col-md-1 col-md-offset-11">
+        <a href="/add" class="btn btn-info">Add Job</a>
     </div>
 </div>
 
@@ -33,7 +43,7 @@
                             <%= post.company_name%>
                         </span>
                         <span class="job-link"><a
-                                    href="#"><%= post.title%></a></span>
+                                    href="detail/<%= post.id%>"><%= post.title%></a></span>
                         <span class="pull-right job-date">Dec 18</span>
                     </li>
                     <% } %>
